@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Assistant</title>
-    <!-- 引入 Tailwind CSS -->
-    <link href="/static/dist/styles.css" rel="stylesheet">
-    <!-- 引入必要的依赖 -->
+    <!-- 使用 url_for 引入 Tailwind CSS -->
+    <link href="{{ url_for('static', filename='dist/styles.css') }}" rel="stylesheet">
+    <!-- CDN 依赖保持不变 -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div id="root"></div>
-    <!-- 引入我们的主要 JavaScript 文件 -->
+    <!-- 使用 url_for 引入 JavaScript -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

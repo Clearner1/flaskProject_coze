@@ -6,7 +6,7 @@ import uuid
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 
 # 初始化 Coze 客户端
 coze_api_token = os.getenv("COZE_API_TOKEN")
