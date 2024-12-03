@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义基础样式 */
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+/* 自定义组件样式 */
+@layer components {
+  .chat-message {
+    @apply max-w-[80%] rounded-2xl p-4 shadow-lg;
+  }
+
+  .user-message {
+    @apply ml-auto bg-blue-500 text-white rounded-br-sm;
+  }
+
+  .assistant-message {
+    @apply mr-auto bg-white dark:bg-gray-800 rounded-bl-sm;
+  }
+}
